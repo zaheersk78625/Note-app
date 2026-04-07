@@ -1,0 +1,29 @@
+{
+  "entities": {
+    "Note": {
+      "title": "Note",
+      "description": "A user's note",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "category": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "syncStatus": { "type": "string", "enum": ["synced", "pending", "deleted"] },
+        "version": { "type": "number" },
+        "isPinned": { "type": "boolean" },
+        "userId": { "type": "string" }
+      },
+      "required": ["id", "title", "content", "userId", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/notes/{noteId}": {
+      "schema": "Note",
+      "description": "User notes collection"
+    }
+  }
+}

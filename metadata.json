@@ -1,0 +1,5 @@
+{
+  "name": "ZenNotes: Real-time Offline-First Note App",
+  "description": "An advanced, offline-first note-taking application with real-time sync, AI summarization, and rich text editing.",
+  "requestFramePermissions": ["microphone"]
+}
